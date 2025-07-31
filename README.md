@@ -26,3 +26,27 @@ To execute each script:
 ```bash
 source ./<script_name>
 ```
+
+...
+
+## Advanced Tasks
+
+- **100-decimal_to_hexadecimal** - Converts a base-10 number stored in `$DECIMAL` to hexadecimal and prints it.
+- **101-rot13** - Encodes and decodes text using the ROT13 cipher (assumes ASCII input).
+- **102-odd** - Prints every other line from the input, starting with the first line.
+- **103-water_and_stir** - Adds two environment variable values in custom bases (`water` and `stir`) and prints the result in base `bestchol`.
+
+### Example Usage
+
+```bash
+export DECIMAL=1337
+./100-decimal_to_hexadecimal   # Output: 539
+
+echo "Hello ROT13!" | ./101-rot13   # Output: Uryyb EBG13!
+
+ls -1 | ./102-odd   # Every other line of directory listing
+
+export WATER=321
+export STIR=14
+./103-water_and_stir  # Custom base arithmetic output
+```
