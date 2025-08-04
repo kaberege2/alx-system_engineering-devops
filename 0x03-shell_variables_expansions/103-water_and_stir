@@ -1,10 +1,2 @@
 #!/bin/bash
-echo "$((5#$WATER + 6#$STIR))" | awk '{ 
-    b = "bestchol"; 
-    o = ""; 
-    while ($1 > 0) { 
-        o = substr(b, ($1 % 8) + 1, 1) o; 
-        $1 = int($1 / 8); 
-    } 
-    print o 
-}'
+echo "$(( $(echo "$WATER" | tr 'water' 01234) + $(echo "$STIR" | tr 'stir' 01234) ))" | tr 0123456789 bestchol
