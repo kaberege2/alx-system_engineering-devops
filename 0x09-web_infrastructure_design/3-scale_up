@@ -1,0 +1,17 @@
+Diagram URL: https://drive.google.com/file/d/1QVUBVzmnHbqznAgH8AjzOzE3pN4fZj3x/view?usp=sharing
+
+Explanations:
+
+1. Load Balancer Cluster (HAProxy x2):
+   Removes Load Balancer SPOF by clustering.
+2. Separate Web Servers:
+   Handle static content requests.
+3. Separate Application Servers:
+   Process dynamic content separately from Web Servers.
+4. Database Cluster (Primary-Replica):
+   Primary handles writes, Replicas handle read queries for load distribution.
+
+Reason for Splitting Components:
+
+- Allows scaling Web/App/DB layers independently.
+- Improves performance and fault isolation.

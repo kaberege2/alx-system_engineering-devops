@@ -1,0 +1,24 @@
+Diagram URL: https://drive.google.com/file/d/1k94ec54tMfnu-byGe0bb9naCCGeRCtZc/view?usp=sharing
+
+Explanations:
+
+1. Server:
+   A physical or virtual machine that hosts the website, containing the web server, application server, and database.
+2. Domain Name:
+   Human-readable name (foobar.com) that maps to the server's IP via DNS.
+3. DNS Record (A Record):
+   Points www.foobar.com to the server’s IP (8.8.8.8).
+4. Web Server (NGINX):
+   Handles HTTP requests, serves static content, forwards dynamic requests to the app server.
+5. Application Server:
+   Processes dynamic requests (PHP, Python) and communicates with the database.
+6. Database (MySQL):
+   Stores website data persistently.
+7. Communication Protocol:
+   HTTP over TCP/IP between client browser and server.
+
+Infrastructure Issues:
+
+- Single Point of Failure (SPOF): One server means total failure if it crashes.
+- Downtime on Deployment: Restarting services will cause temporary downtime.
+- Scalability: Cannot handle high traffic without adding more servers.

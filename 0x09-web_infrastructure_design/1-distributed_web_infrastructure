@@ -1,0 +1,28 @@
+Diagram URL: https://drive.google.com/file/d/1rRTp5loc6qDdrVVXksF3WFTbGhlr0bq6/view?usp=sharing
+
+Explanations:
+
+1. Load Balancer (HAProxy):
+   Distributes traffic to multiple application servers to balance load.
+2. Application Servers (2x):
+   Each has NGINX, application files, and handles client requests.
+3. Database (MySQL Primary):
+   Single DB instance handling both reads and writes.
+
+Load Balancer Algorithm:
+
+- Round-Robin: Sends incoming requests alternately to available servers.
+
+Active-Active Setup:
+
+- Both app servers actively handle requests at the same time.
+
+Database Primary-Replica (Master-Slave):
+
+- Not implemented in this task, but would involve a Primary node handling writes and Replicas handling reads.
+
+Infrastructure Issues:
+
+- SPOF at Load Balancer and Database.
+- No Firewall or HTTPS — insecure communication.
+- No monitoring to detect failures proactively.

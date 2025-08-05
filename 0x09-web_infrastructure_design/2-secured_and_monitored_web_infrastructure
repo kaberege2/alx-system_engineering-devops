@@ -1,0 +1,20 @@
+Diagram URL: https://drive.google.com/file/d/1fDFnCoufhBiBNuZK6SAgt5sL6OEP_ONH/view?usp=sharing
+
+Explanations:
+
+1. Firewalls (3x):
+   Protect each public-facing server by filtering incoming/outgoing traffic.
+2. SSL Certificate:
+   Enables HTTPS to encrypt data between user and Load Balancer.
+3. Monitoring Clients (Sumologic agents):
+   Collect metrics/logs and send to monitoring system.
+
+Monitoring QPS:
+
+- Monitoring tools can collect data from NGINX access logs or DB queries per second.
+
+Infrastructure Issues:
+
+- SSL termination at Load Balancer: Internal communication is unencrypted.
+- Database SPOF: Single Primary node is a failure risk.
+- Tightly Coupled Components: Web/App layers not yet separated, limiting scalability.
